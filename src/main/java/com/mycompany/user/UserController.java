@@ -54,7 +54,7 @@ public class UserController {
     public String deleteUser(@PathVariable("id") Integer id, RedirectAttributes ra) {
         try {
             service.delete(id);
-            ra.addFlashAttribute("message", "The User ID " + id + " Has Been Deleted.");
+            ra.addFlashAttribute("message", "The User ID " + id + " Has Been Deleted Successfully.");
         } catch (UserNotFoundException e) {
             ra.addFlashAttribute("message", e.getMessage());
         }
